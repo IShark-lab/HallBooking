@@ -18,7 +18,7 @@ namespace HallBooking.PL.Controllers
 
         //Зарезервувати новий зал
         [HttpPost]
-        public async Task<ActionResult> PostReservation(BookingDto booking)
+        public async Task<ActionResult> BookRoom(BookingDto booking)
         {
             var result = await _service.ReservationAsync(booking);
 
@@ -30,7 +30,7 @@ namespace HallBooking.PL.Controllers
         }
         //Отримати усi зали якi можно орендувати отталкиваясь вiд вхiдних данних
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ConferenceRoomDto>>> AllAvaibleRooms(DateTime strateTime,DateTime endTime, int amountPersons)
+        public async Task<ActionResult<IEnumerable<ConferenceRoomDto>>> GetAvaibleRooms(DateTime strateTime,DateTime endTime, int amountPersons)
         {
             var result = await _service.GetAllAvaibleRooms(strateTime, endTime, amountPersons);
 
