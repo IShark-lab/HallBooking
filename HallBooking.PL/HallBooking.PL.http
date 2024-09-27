@@ -1,0 +1,6 @@
+@HallBooking.PL_HostAddress = http://localhost:5294
+
+GET {{HallBooking.PL_HostAddress}}
+Accept: application/json
+
+###
