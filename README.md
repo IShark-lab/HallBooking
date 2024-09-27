@@ -25,7 +25,7 @@ Add-Migration "Имя миграции" -Project HallBooking.DLA -StartupProject
 
 Update-Database
 
-# Документация
+# API
 
 # 1. Зарезервировать новый зал
 HTTP метод: POST
